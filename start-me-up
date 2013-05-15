@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+NB_HOME=${NB_HOME:-`dirname $0`}
+
+if echo $PYTHONPATH | grep 'cookie-python'
+then
+    :
+else
+    export PYTHONPATH=$NB_HOME/cookie-python:$PYTHONPATH
+fi
+
+OUTPUT=.ipynb.output
+
+cd "$NB_HOME"
+
+if [ -n "$1" -a \( "$1" = "-k" -o "$1" = "kill" \) ]
+then
+    echo "Killing running iPython Notebook..."
+    PS=$(ps | grep "ipython notebook" | grep -v grep | cut -c1-6)
+    kill $PS
+    exit 0
+fi
+
+if ps | grep "ipython notebook" | grep -v grep >/dev/null
+then
+    echo "iPython Notebook is already running. Attempting to connect to it."
+    URL=$(grep "running at: http" $OUTPUT | sed 's/.*http:/http:/')
+    open $URL
+else
+    echo "Starting iPython Notebook with Cookie Python project."
+    nohup ipython notebook -c 'from Check.check import *' --pylab inline 2>&1 > $OUTPUT &
+fi
