@@ -91,3 +91,6 @@ in the following:
   [6]: http://ipython.org/ipython-doc/stable/install/install.html
   [7]: http://www.pip-installer.org
   [8]: http://pythonhosted.org/distribute/easy_install.html
+
+  [howard]: https://github.com/howardabrams
+  [rob]: https://github.com/robbednark
