@@ -26,9 +26,9 @@ What's it Like?
 --------------
 
 The easiest way to explain what it looks like is to show a screenshot
-from the browser (or download the [first lesson as a PDF](raw/master/misc/01-output.pdf)):
+from the browser (or download the [first lesson as a PDF](misc/01-output.pdf)):
 
-![Cookie Python Screenshot](master/misc/screenshot.png)
+![Cookie Python Screenshot](misc/screenshot.png)
 
 Installation
 ------------
