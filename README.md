@@ -22,6 +22,14 @@ This project is our attempt. It is based on the wonderful
 [notebook extension][3] to [iPython][4]. You can fork, extend and even
 contribute this project to share with others.
 
+What's it Like?
+--------------
+
+The easiest way to explain what it looks like is to show a screenshot
+from the browser (or download the [first lesson as a PDF](raw/master/misc/01-output.pdf)):
+
+![Cookie Python Screenshot](master/misc/screenshot.png)
+
 Installation
 ------------
 
