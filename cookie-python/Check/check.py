@@ -1,4 +1,5 @@
 from IPython.display import display, Image
+from random import random, randint
 import string
 
 def check(number, exercise, *arguments):
@@ -71,3 +72,21 @@ def check2(exercise, value):
             print "Good job! The area is", value, " since the radius is half the diameter, r must be 3."
         else:
             print "Hint: The diameter is 6, but the formula uses `r` which is the radius."
+
+def dice(side):
+    if side == 1:
+        return Image('http://openclipart.org/image/250px/svg_to_png/96079/dado_1.png')
+    elif side == 2:
+        return Image('http://openclipart.org/image/250px/svg_to_png/96085/dado_2.png')
+    elif side == 3:
+        return Image('http://openclipart.org/image/250px/svg_to_png/96091/dado_3.png')
+    elif side == 4:
+        return Image('http://openclipart.org/image/250px/svg_to_png/96097/dado_4.png')
+    elif side == 5:
+        return Image('http://openclipart.org/image/250px/svg_to_png/96103/dado_5.png')
+    elif side == 6:
+        return Image('http://openclipart.org/image/250px/svg_to_png/96109/dado_6.png')
+    else:
+        print "The number for 'side' must be 1, 2, 3, 4, 5, or 6."
+
+# 10 sided: http://openclipart.org/people/wirelizard/ten_sided_dice.svg
