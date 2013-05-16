@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-NB_HOME=${NB_HOME:-`dirname $0`}
+COOKIE_PYTHON_HOME=${COOKIE_PYTHON_HOME:-`dirname $0`}
 
 if echo $PYTHONPATH | grep 'cookie-python'
 then
     :
 else
-    export PYTHONPATH=$NB_HOME/cookie-python:$PYTHONPATH
+    export PYTHONPATH=$COOKIE_PYTHON_HOME/cookie-python:$PYTHONPATH
 fi
 
 OUTPUT=.ipynb.output
 
-cd "$NB_HOME"
+cd "$COOKIE_PYTHON_HOME"
 
 if [ -n "$1" -a \( "$1" = "-k" -o "$1" = "kill" \) ]
 then
