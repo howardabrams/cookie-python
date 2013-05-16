@@ -3,7 +3,7 @@ from random import random, randint
 import string
 
 def check(number, exercise, *arguments):
-    """Checks each exercise in the assignments of a Notebook.
+    """Checks each exercise in the assignments of the Cookie Python Notebook.
 
        - `number` is the assignment notebook number, or name.
        - `exercise` the exercise number, starting with 1.
@@ -21,6 +21,12 @@ def check(number, exercise, *arguments):
         print "Assignment", number, "Exercise", exercise, "is not completed."
 
 def check1(exercise, value):
+    """Check the exercises for Assignment 01-Buckets and Variables.
+
+    Parameters:
+    * `exercise` - The exercise number from 1 to 5
+    * `value` - The parameter value for the exercise number."""
+
     if exercise == 1:
         if value == 42:
             print "You did it! Have a cookie."
@@ -58,6 +64,12 @@ def check1(exercise, value):
             print 'You need to change the _ symbol to a string with more than one line.'
 
 def check2(exercise, value):
+    """Check the exercises for Assignment 02-Operators.
+
+    Parameters:
+    * `exercise` - The exercise number from 1 to 2
+    * `value` - The parameter value for the exercise number."""
+
     if exercise == 1:
         pi = str(value)
         if pi.startswith("3.14"):
@@ -73,7 +85,9 @@ def check2(exercise, value):
         else:
             print "Hint: The diameter is 6, but the formula uses `r` which is the radius."
 
+# This function is used in assignment/lesson 03- Calling Functions
 def dice(side):
+    "This function takes a number from 1 to 6, and it returns a picture of a six-sided die with that number on it."
     if side == 1:
         return Image('http://openclipart.org/image/250px/svg_to_png/96079/dado_1.png')
     elif side == 2:
@@ -88,5 +102,3 @@ def dice(side):
         return Image('http://openclipart.org/image/250px/svg_to_png/96109/dado_6.png')
     else:
         print "The number for 'side' must be 1, 2, 3, 4, 5, or 6."
-
-# 10 sided: http://openclipart.org/people/wirelizard/ten_sided_dice.svg
