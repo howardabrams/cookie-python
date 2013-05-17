@@ -1,6 +1,7 @@
 from IPython.display import display, Image
 from random import random, randint
 import string
+import math
 
 def check(number, exercise, *arguments):
     """Checks each exercise in the assignments of the Cookie Python Notebook.
@@ -80,6 +81,20 @@ def check2(exercise, value):
             print "Just like our previous assignments, you need to replace the _ symbol above with the answer. In this case, the answer begins with 3. something something."
 
     elif exercise == 2:
+        pi1 = str(value)
+        pi2 = str(math.pi)
+
+        print pi2
+        print
+
+        if pi1.startswith("3.14"):
+            d = len(pi2) - len(pi1)
+            if d <= 0:
+                print "Wow! Your version of pi is great! You are amazing. However, math.pi may be a little quicker to type."
+            elif d > 0:
+                print "Python stores", d, "more digits to pi. So maybe you should use that variable in the next exercise."
+
+    elif exercise == 3:
         if value > 28 and value < 29:
             print "Good job! The area is", value, " since the radius is half the diameter, r must be 3."
         else:
