@@ -33,36 +33,36 @@ def check1(exercise, value):
     if exercise == 1:
         if value == 42:
             print "You did it! Have a cookie."
-            return Image(url='http://is.gd/Zc7ym2')
+            return Image(url='http://openclipart.org/image/250px/svg_to_png/130009/cookie.png')
         else:
             print "You need to change the _ symbol to the number 42."
 
     elif exercise == 2:
         if value == 2.5:
             print "You did it! Have another cookie."
-            return Image(url='http://is.gd/Zc7ym2')
+            return Image(url='http://openclipart.org/image/250px/svg_to_png/130009/cookie.png')
         else:
             print "You need to change the _ symbol to the number 2.5"
 
     elif exercise == 3:
         if value != None and len(value) > 2:
             print "Hello, " + value + ", it is nice to meet you."
-            return Image(url='http://image.shutterstock.com/display_pic_with_logo/627865/627865,1324369583,1/stock-vector--two-dogs-greet-each-other-91135244.jpg')
+            return Image(url='http://openclipart.org/image/250px/svg_to_png/167186/Hello.png')
         else:
             print 'You need to change the _ symbol to the number you name inside quotes, like "David"'
 
 
     elif exercise == 4:
         if value != None and value.find("at's ball") > -1:
-            print "Good job! Here is Pat's ball:"
-            return Image(url='http://is.gd/utzKZX')
+            print "Good job! Here is Pat's shiny ball:"
+            return Image(url='http://openclipart.org/image/250px/svg_to_png/1413/molumen_blue_cristal_ball.png')
         else:
             print "The sentence should say something about Pat's ball."
 
     elif exercise == 5:
         if value != None and value.find("\n") > -1:
             print "Good job! This deserves an award."
-            return Image(url='http://is.gd/GLWJuE')
+            return Image(url='http://openclipart.org/image/250px/svg_to_png/151087/logo_mogo.png')
         else:
             print 'You need to change the _ symbol to a string with more than one line.'
 
