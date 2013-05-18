@@ -18,6 +18,8 @@ def check(number, exercise, *arguments):
         return check1(exercise, value)
     elif number == 2:
         return check2(exercise, value)
+    elif number == 3:
+        return check3(exercise, arguments[0], arguments[1])
     else:
         print "Assignment", number, "Exercise", exercise, "is not completed."
 
@@ -117,3 +119,21 @@ def dice(side):
         return Image('http://openclipart.org/image/250px/svg_to_png/96109/dado_6.png')
     else:
         print "The number for 'side' must be 1, 2, 3, 4, 5, or 6."
+
+def check3(exercise, first, second):
+    """Check the exercises for Assignment 03-Calling Functions.
+
+    Parameters:
+    * `exercise` - The exercise number from 1 to 2
+    * `first` - The parameter value for the exercise number."""
+
+    if exercise == 1:
+        if first and first > 0:
+            print "The square root of your random number is", first
+
+    elif exercise == 2:
+        if first == second:
+            print "Yes, you guessed right. Have a cookie shaped like a multiplication sign."
+            return Image('http://openclipart.org/image/250px/svg_to_png/68365/x-cookie.png')
+        else:
+            print "Nope. Your random number was", second, "since", math.sqrt(second), "x", math.sqrt(second), "is", second
