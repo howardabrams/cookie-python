@@ -62,9 +62,12 @@ def check1(exercise, value):
     elif exercise == 5:
         if value != None and value.find("\n") > -1:
             print "Good job! This deserves an award."
-            return Image(url='http://openclipart.org/image/250px/svg_to_png/151087/logo_mogo.png')
+            show_award()
         else:
             print 'You need to change the _ symbol to a string with more than one line.'
+
+def show_award():
+    return Image(url='http://openclipart.org/image/250px/svg_to_png/151087/logo_mogo.png')
 
 def check2(exercise, value):
     """Check the exercises for Assignment 02-Operators.
