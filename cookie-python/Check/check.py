@@ -137,3 +137,37 @@ def check3(exercise, first, second):
             return Image('http://openclipart.org/image/250px/svg_to_png/68365/x-cookie.png')
         else:
             print "Nope. Your random number was", second, "since", math.sqrt(second), "x", math.sqrt(second), "is", second
+
+def show_pony(name):
+    """Shows a picture of a pony based on its name."""
+    if name == "Applejack":
+        return Image("http://images2.wikia.nocookie.net/__cb20130419182238/mlp/images/thumb/d/d8/Applejack_S01E13_cropped.png/250px-Applejack_S01E13_cropped.png")
+    elif name == "Fluttershy":
+        return Image("http://images3.wikia.nocookie.net/__cb20130317084227/mlp/images/thumb/3/3a/Fluttershy_trotting_CROPPED_S2E7.png/250px-Fluttershy_trotting_CROPPED_S2E7.png")
+    elif name == "Scootaloo":
+        return Image("http://images2.wikia.nocookie.net/__cb20130109015850/mlp/images/thumb/d/de/Scootaloo_offering_help_crop_S1E24.png/250px-Scootaloo_offering_help_crop_S1E24.png")
+    elif name == "Caramel":
+        return Image("http://images4.wikia.nocookie.net/__cb20110706134227/mlp/images/thumb/0/09/Caramel.png/250px-Caramel.png")
+    elif name == "Rainbow Dash":
+        return Image("http://images1.wikia.nocookie.net/__cb20130307050703/mlp/images/thumb/4/4b/Rainbow_Dash_Wonderbolt_fantasy_cropped_S1E3.png/250px-Rainbow_Dash_Wonderbolt_fantasy_cropped_S1E3.png")
+    elif name == "Big McIntosh":
+        return Image("http://images3.wikia.nocookie.net/__cb20111110054616/mlp/images/thumb/2/2e/Big_McIntosh_onstage_S2E05.png/250px-Big_McIntosh_onstage_S2E05.png")
+    elif name == "Braeburn":
+        return Image("http://images2.wikia.nocookie.net/__cb20120715144761/mlp/images/thumb/3/36/Braeburn_S1E21_thumb.png/250px-Braeburn_S1E21_thumb.png")
+    elif name == "Cheerilee":
+        return Image("http://images2.wikia.nocookie.net/__cb20111015001440/mlp/images/a/a3/Cheerilee_next_to_easel_cropped_S1E12.png")
+    else:
+        print "I don't have a picture of a pony named,", name
+
+def is_prime(number):
+    if number < 1:
+        return False
+    elif number < 4:
+        return True
+    elif number % 2 == 0:
+        return False
+    else:
+        for i in range(5, number / 2, 2):
+            if number % i == 0:
+                return False
+        return True 
