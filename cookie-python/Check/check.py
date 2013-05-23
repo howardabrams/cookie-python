@@ -174,3 +174,13 @@ def is_prime(number):
             if number % i == 0:
                 return False
         return True 
+
+def pokemon(monster):
+    if monster["name"] == "Charmander":
+        return Image("http://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/185px-004Charmander.png")
+    elif monster["name"] == "Pikachu":
+        return Image("http://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/205px-025Pikachu.png")
+    elif monster["name"] == "Bulbasaur":
+        return Image("http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/170px-001Bulbasaur.png")
+    else:
+        print "Sorry, I don't know anything about that Pokemon."
