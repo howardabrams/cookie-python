@@ -130,9 +130,11 @@ def playGame():
 I will ask questions and try to guess what animal you are thinking.
 Think of an animal. Got it in your head? Good!
 """
-  
-    while askYesNo("Would you like me to guess?"):
+
+    prompt = "Would you like me to guess your animal?"
+    while askYesNo(prompt):
         walkTree(animals)    # playRound(animals)
+        prompt = "Would you like to play again and I'll guess another animal?"
 
 # <markdowncell>
 
